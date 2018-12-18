@@ -9,7 +9,7 @@
 
 ## Introduction
 
-If you've noticed previously, we saved some information into a variable.
+Previously, we saved some information into a variable.
 "Saving" to a variable allows us to _save_ a result so we can use it
 again later. Storing calculations to _temporary storage places_ is the
 heart of making efficient programs. It's a simple idea that has powerful
@@ -119,8 +119,7 @@ pi;
 
 ### Reassigning Variable Value
 
-Changing the value of a variable in JavaScript works just in the same way
-as it does in Ruby:
+Changing the value of a variable in JavaScript works as follows:
 
 ```js
 var pi = 3.14159;
@@ -198,25 +197,8 @@ language;
 Because of its ubiquity in legacy code and StackOverflow posts, it's important
 to get to know `var`. However, as we alluded to earlier, there is almost no
 reason to use `var` with the features JavaScript has post-2015. `var` comes with
-a ton of baggage in the form of scope issues (which we will discuss in the
-lesson on scope in JavaScript) and allows developers to play a little too
-fast and loose with variable declarations.
-
-For example, with `var`, no error is thrown if you declare a variable twice:
-
-```js
-var language = "Ruby";
-//=> undefined
-
-var language = "JavaScript";
-//=> undefined
-
-language;
-//=> "JavaScript"
-```
-
-This is bad! There's no reason to declare a variable twice, and it's usually a
-mistake by a developer unaware that the variable had already been declared.
+a ton of baggage in the form of scope issues (which is whole other topic), and
+allows developers to play a little too fast and loose with variable declarations.
 
 ### `let`
 
