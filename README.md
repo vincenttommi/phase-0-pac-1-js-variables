@@ -2,10 +2,10 @@
 
 ## Learning Goals
 
-1. Define a variable
-2. Name variables in JavaScript
-3. Initialize variables in JavaScript
-4. Identify when to use `const`, `let`, and `var` for declaring variables
+* Define a variable
+* Name variables in JavaScript
+* Initialize variables in JavaScript
+* Identify when to use `const`, `let`, and `var` for declaring variables
 
 ## Introduction
 
