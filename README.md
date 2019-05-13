@@ -197,7 +197,7 @@ language;
 Because of its ubiquity in legacy code and StackOverflow posts, it's important
 to get to know `var`. However, as we alluded to earlier, there is almost no
 reason to use `var` with the features JavaScript has post-2015. `var` comes with
-a ton of baggage in the form of scope issues (which is whole other topic), and
+a ton of baggage in the form of scope issues (which is a whole other topic), and
 allows developers to play a little too fast and loose with variable declarations.
 
 ### `let`
