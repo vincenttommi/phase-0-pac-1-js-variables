@@ -214,6 +214,7 @@ let pi = 3.14159;
 let pi = "the ratio between a circle's circumference and diameter";
 //=> Uncaught SyntaxError: Identifier 'pi' has already been declared
 ```
+**note:** in some browsers the console won't throw this error if you try the above code there. However, you will get the error when developing your app. 
 
 Just like with `var`, we can still reassign a variable declared with `let`:
 
