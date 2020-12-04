@@ -9,38 +9,41 @@
 
 ## Introduction
 
-Previously, we saved some information into a variable.
-"Saving" to a variable allows us to _save_ a result so we can use it
-again later. Storing calculations to _temporary storage places_ is the
-heart of making efficient programs. It's a simple idea that has powerful
-consequences--but for the moment, let's look at the options we have when
-it comes to storing information.
+Previously, we saved some information into a variable. "Saving" to a variable
+allows us to _store_ a result so we can use it again later. Storing calculations
+to _temporary storage places_ is the heart of making efficient programs. It's a
+simple idea that has powerful consequences.
+
+To start, let's look at the options we have when it comes to storing
+information.
 
 ## Define a Variable
 
 A variable is a container in which we can store values for later retrieval.
 
 Imagine a box that can hold any type of data: a `number`, `string`, `boolean`,
-`object` — even an `undefined`. We take some data that we want to store, place
-it inside the box, and hand the box off to the JavaScript engine, which stores
-it in memory. All done! Our data is safely cached until we need to access it
-again.
+`object` &mdash; even an `undefined`. We take some data that we want to store,
+place it inside the box, and hand the box off to the JavaScript engine, which
+stores it in memory. All done! Our data is safely cached until we need to access
+it again.
 
 But wait! When we ask for the data back, how will the JavaScript engine know
-_which_ box to retrieve? We need to assign a name to our variable — a label
-for our box — so that we can tell the engine exactly which piece of stored
-data we want to access.
+_which_ box to retrieve? We need to assign a name to our variable &mdash; a
+label for our box &mdash; so that we can tell the engine exactly which piece of
+stored data we want to access.
 
 ## Name Variables in JavaScript
 
 Variable names in JavaScript can sometimes be complicated, but if you follow
 these three rules you'll be fine:
 
-- Start every variable name with a lowercase letter. Variable names starting
-with a number are not valid.
-- Don't use spaces — `camelCaseYourVariableNames` (see the camel humps?) instead
-of `snake_casing_them` (like the underscore is a snake that swallowed the words).
-- Don't use JavaScript [reserved words][reserved words] or [future reserved words][future reserved words].
+* Start every variable name with a lowercase letter. Variable names starting
+  with a number are not valid.
+* Don't use spaces. If a variable name consists of multiple words,
+  `camelCaseYourVariableNames` (see the camel humps?) instead of
+  `snake_casing_them` (like the underscore is a snake that swallowed the words).
+* Don't use JavaScript [reserved words][reserved words] or [future reserved
+  words][future reserved words].
 
 It's important to note that case matters, so `javaScript`, `javascript`,
 `JavaScript`, and `JAVASCRIPT` are four different variables.
@@ -48,11 +51,11 @@ It's important to note that case matters, so `javaScript`, `javascript`,
 ## Initialize Variables in JavaScript
 
 The `var` reserved word is the classic way to declare a variable. It's been
-around since the inception of JavaScript, and it's what you will encounter
-in any pre-ES2015 code.
+around since the inception of JavaScript, and it's what you will encounter in
+any pre-ES2015 code.
 
-Creating new variables in JavaScript is really a two-step process. First,
-we declare the variable:
+Creating new variables in JavaScript is really a two-step process. First, we
+declare the variable:
 
 ```js
 var pi;
@@ -67,19 +70,18 @@ pi = 3.14159;
 //=> 3.14159
 ```
 
-We can package both of the initialization steps — declaration and assignment
-— in a single line of code:
+We can package both of the initialization steps &mdash; declaration and
+assignment &mdash; in a single line of code:
 
 ```js
 var pi = 3.14159;
 //=> undefined
 ```
 
-
 ### Multi-line Variable Assignment
 
-Let's say I needed to declare and define multiple variables. It feels like a
-lot to have to repeat `var` over and over again. JavaScript allows us to do
+Let's say I needed to declare and define multiple variables. It feels like a lot
+to have to repeat `var` over and over again. JavaScript allows us to do
 multi-line variable assignment to alleviate this pain. Every variable must be
 separated with a comma, and the entire line must end with a semicolon.
 
@@ -111,7 +113,8 @@ var a = 5, b = 2, c = 3, d = {}, e = [];
 
 ### Retrieving Variables
 
-To retrieve a declared variable, refer to its name:
+To retrieve a declared variable, simply type in its name:
+
 ```js
 pi;
 //=> 3.14159
@@ -198,7 +201,8 @@ Because of its ubiquity in legacy code and StackOverflow posts, it's important
 to get to know `var`. However, as we alluded to earlier, there is almost no
 reason to use `var` with the features JavaScript has post-2015. `var` comes with
 a ton of baggage in the form of scope issues (which is a whole other topic), and
-allows developers to play a little too fast and loose with variable declarations.
+allows developers to play a little too fast and loose with variable
+declarations.
 
 ### `let`
 
@@ -214,7 +218,9 @@ let pi = 3.14159;
 let pi = "the ratio between a circle's circumference and diameter";
 //=> Uncaught SyntaxError: Identifier 'pi' has already been declared
 ```
-**note:** in some browsers the console won't throw this error if you try the above code there. However, you will get the error when developing your app. 
+
+**Note:** in some browsers the console won't throw this error if you try the
+above code there. However, you will get the error when developing your app.
 
 Just like with `var`, we can still reassign a variable declared with `let`:
 
@@ -240,18 +246,19 @@ not be redeclared but it also ***cannot be reassigned***. This is a good thing
 for three reasons:
 
 1. When we assign a primitive value (any type of data _except_ an object) to a
-variable declared with `const`, we know that variable will _always_ contain the
-same value.
+   variable declared with `const`, we know that variable will _always_ contain
+   the same value.
 2. When we assign an object to a variable declared with `const`, we know that
-variable will _always_ point to the same object (though the object's properties
-can still be modified — more on this in the lesson about objects in JavaScript).
+   variable will _always_ point to the same object (though the object's
+   properties can still be modified &mdash; more on this in the lesson about
+   objects in JavaScript).
 3. When another developer looks at our code and sees a `const` declaration, they
-immediately know that variable points to the same object or has the same value
-every other time it's referenced in the program. For variables declared with `let`
-or `var`, the developer cannot be so sure and will have to keep track of how those
-variables change throughout the program. The extra information provided by `const`
-is valuable, and it comes at no extra cost to you! Just use `const` as much as
-possible and reap the benefits.
+   immediately know that variable points to the same object or has the same
+   value every other time it's referenced in the program. For variables declared
+   with `let` or `var`, the developer cannot be so sure and will have to keep
+   track of how those variables change throughout the program. The extra
+   information provided by `const` is valuable, and it comes at no extra cost to
+   you! Just use `const` as much as possible and reap the benefits.
 
 ```js
 const pi = 3.14159;
@@ -272,8 +279,8 @@ pi = 3.14159;
 //=> 3.14159
 ```
 
-However, because `const` doesn't allow reassignment after the variable is initialized,
-we **must** assign a value right away:
+However, because `const` doesn't allow reassignment after the variable is
+initialized, we **must** assign a value right away:
 
 ```js
 const pi;
@@ -287,12 +294,12 @@ As your JavaScript powers increase with experience, you'll develop a more
 nuanced understanding of what to use where. However, for now, this is a good
 rule of thumb:
 
-- ***Use `var`...*** never.
-- ***Use `let`...*** when you know the value of a variable will change. For example, a
+* ***Use `var`...*** never.
+* ***Use `let`...*** when you know the value of a variable will change. For example, a
 `counter` variable that starts at `0` and is subsequently incremented to `1`, `2`, `3`,
 and so on. In the lessons on looping and iteration in JavaScript, `let` will have its
 moment in the spotlight.
-- ***Use `const`...*** for _every_ other variable.
+* ***Use `const`...*** for _every_ other variable.
 
 Best practice is to always declare variables with `const` and then, if you later
 realize that the value has to change over the course of your program, circle
@@ -300,17 +307,18 @@ back to change it to `let`.
 
 ## Conclusion
 
-We covered what a variable is, how to initialize and retrieve it, and how to assign its
-values. We also looked at best practices for using `var`, `let` and `const`.
+We covered what a variable is, how to initialize and retrieve it, and how to
+assign its values. We also looked at best practices for using `var`, `let` and
+`const`.
 
 ## Resources
-- [MDN — Language basics crash course: Variables](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics#Variables)
-- [Valid JavaScript variable names in ECMAScript 6][valid variable names]
-- [MDN — `var`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
-- [MDN — `let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
-- [MDN — `const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
-- [JavaScript ES6+: `var`, `let`, or `const`?](https://medium.com/javascript-scene/javascript-es6-var-let-or-const-ba58b8dcde75)
 
+* [MDN — Language basics crash course: Variables](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics#Variables)
+* [Valid JavaScript variable names in ECMAScript 6][valid variable names]
+* [MDN — `var`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
+* [MDN — `let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
+* [MDN — `const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
+* [JavaScript ES6+: `var`, `let`, or `const`?](https://medium.com/javascript-scene/javascript-es6-var-let-or-const-ba58b8dcde75)
 
 [valid variable names]: https://mathiasbynens.be/notes/javascript-identifiers-es6
 [reserved words]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Reserved_keywords_as_of_ECMAScript_2015
