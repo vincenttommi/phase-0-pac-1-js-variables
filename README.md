@@ -186,7 +186,7 @@ let pi = "the ratio between a circle's circumference and diameter";
 
 <!-- **Note**: in some browsers the console won't throw this error if you try the above code there. However, you will get the error when developing your app. -->
 
-Why is this a good thing? Well, you can imagine how easy it could be, especially in a lengthy program, to accidentally reuse a variable name. Doing so can cause unpredictable behavior because the value associated with the variable in one part of the program may be changed by code in a different part of the program. These types of problems can be very difficult to track down and debug. If you use `let` to declare your variables, this should never be an issue.
+Why is this a good thing? Well, you can imagine how easy it could be, especially in a lengthy program, to accidentally reuse a variable name. Doing so can cause unpredictable behavior because the value associated with the variable in one part of the program may be changed by code in a different part of the program. These types of problems can be very difficult to track down and debug. Using `let` to declare your variables will reduce the likelihood of introducing such errors into your code.
 
 While we can't _redeclare_ a variable that is declared using `let`, we can still _reassign_ its value:
 
