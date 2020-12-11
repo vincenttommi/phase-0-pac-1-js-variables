@@ -1,4 +1,4 @@
-# JavaScript Fundamentals: JavaScript Variables
+# JavaScript Variables
 
 ## Learning Goals
 
