@@ -149,14 +149,7 @@ In the past, `var` was the only option available in JavaScript for declaring
 variables. Then, in 2015, the language underwent a major revision that, among
 many other changes, added two new options: `const` and `let`.
 
-> **NOTE:** Delving into the history of JavaScript and the many changes and
-> improvements that were made to it in 2015 is outside the scope of this lesson.
-> However, as you're learning to code in JavaScript you may see references to
-> `ECMAScript 2015`, `ES2015`, or `ES6`. These terms are interchangeable and
-> refer to that major revision. (ECMAScript is the "offical" name of
-> JavaScript.) There are some resources listed at the end of this lesson if
-> you're interested in learning more about `ES2015` and the history of
-> JavaScript.
+> **NOTE:** Delving into the history of JavaScript and the many changes and improvements that were made to it in 2015 is outside the scope of this lesson. However, as you're learning to code in JavaScript you may see references to `ECMAScript 2015`, `ES2015`, or `ES6`. These terms are interchangeable and refer to that major revision. (ECMAScript is the "offical" name of JavaScript.) There are some resources listed at the end of this lesson if you're interested in learning more about `ES2015` and the history of JavaScript.
 
 The addition of `const` and `let` was in response to significant problems that
 the use of `var` can cause. In particular, it can create scope issues (which is
