@@ -217,26 +217,26 @@ throughout the program. The extra information provided by `const` is valuable,
 and it comes at no extra cost to you! Just use `const` whenever possible and
 reap the benefits.
 
-***NOTE***: With `let`, it's possible to declare a variable without assigning a value:
-
-```js
-let pi;
-//=> undefined
-
-pi = 3.14159;
-//=> 3.14159
-```
-
-However, because `const` doesn't allow reassignment after the variable is
-initialized, we **must** assign a value right away:
-
-```js
-const pi;
-//=> Uncaught SyntaxError: Missing initializer in const declaration
-
-const pi = 3.14159;
-//=> undefined
-```
+> **Note**: With `let`, it's possible to declare a variable without assigning a value:
+> 
+> ```js
+> let pi;
+> //=> undefined
+>
+> pi = 3.14159;
+> //=> 3.14159
+> ```
+>
+> However, because `const` doesn't allow reassignment after the variable is
+> initialized, we **must** assign a value right away:
+> 
+> ```js
+> const pi;
+> //=> Uncaught SyntaxError: Missing initializer in const declaration
+>
+> const pi = 3.14159;
+> //=> undefined
+> ```
 
 As your JavaScript powers increase with experience, you'll develop a more
 nuanced understanding of what to use where. However, for now, this is a good
