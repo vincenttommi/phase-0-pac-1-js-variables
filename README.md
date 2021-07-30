@@ -28,8 +28,8 @@ safely cached until we need to access it again.
 ![Raiders of the Lost Ark warehouse](https://user-images.githubusercontent.com/17556281/28639657-fea1930a-7216-11e7-8c38-45bc9fab96a7.gif)
 
 But wait! When we ask for the data back, how will the JavaScript engine know
-_which_ box to retrieve? We need to assign a name to our variable &mdash; a
-label for our box &mdash; so that we can use the _variable lookup expression_ to
+_which_ box to retrieve? We need to assign a name to our variable — a
+label for our box — so that we can use the _variable lookup expression_ to
 tell the engine exactly which piece of stored data we want to access.
 
 ## Variable Names in JavaScript
@@ -74,7 +74,7 @@ pi = 3.14159;
 ```
 
 We can make our code a bit more efficient by packaging both initialization steps
-&mdash; declaration and assignment &mdash; in a single line of code:
+— declaration and assignment — in a single line of code:
 
 ```js
 let pi = 3.14159;
